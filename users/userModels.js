@@ -9,8 +9,8 @@ function find() {
   return db("users").select("id", "username");
 }
 
-function findBy(filer) {
-  return db("users").select("id", "username", "password");
+function findBy(filter) {
+  return db("users").select("id", "username", "password").where(filter);
 }
 
 function findByID(id) {
